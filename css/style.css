@@ -60,6 +60,11 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center; }
+  @media only screen and (max-width: 31.25em) {
+    .header-part {
+      flex-wrap: wrap;
+      align-content: space-around;
+      height: 11rem; } }
 
 .content {
   display: flex; }
@@ -87,6 +92,9 @@ body {
   @media only screen and (max-width: 56.25em) {
     .detail {
       padding: 3rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .detail {
+      flex-direction: column; } }
 
 .description {
   flex: 0 0 60%;
@@ -99,6 +107,10 @@ body {
     .description {
       padding: 2rem;
       margin-right: 3rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .description {
+      margin-right: 0;
+      margin-bottom: 3rem; } }
 
 .user-reviews {
   flex: 1;
@@ -117,6 +129,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center; }
+  @media only screen and (max-width: 31.25em) {
+    .search {
+      order: 1;
+      flex: 0 0 100%;
+      background-color: var(--color-Grey-light-2); } }
   .search__input {
     font-family: inherit;
     font-size: inherit;
@@ -237,11 +254,21 @@ body {
       .sidenav__link:link, .sidenav__link:visited {
         justify-content: center;
         padding: 2rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .sidenav__link:link, .sidenav__link:visited {
+        flex-direction: column;
+        padding: 1.5rem .5rem; } }
   .sidenav__icon {
     width: 1.75rem;
     height: 1.75rem;
     margin-right: 2rem;
     fill: currentColor; }
+    @media only screen and (max-width: 37.5em) {
+      .sidenav__icon {
+        margin-right: 0;
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-bottom: 0.7rem; } }
 
 /*---------- Copyright ----------*/
 .copyright {
@@ -265,15 +292,32 @@ body {
   display: flex;
   border-bottom: 1px solid var(--color-Grey-light-2);
   align-items: center; }
+  @media only screen and (max-width: 27.5em) {
+    .overview {
+      flex-direction: column; } }
   .overview__heading {
     font-size: 2.25rem;
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
     padding: 1.5rem 3rem; }
+    @media only screen and (max-width: 37.5em) {
+      .overview__heading {
+        font-size: 1.8rem;
+        padding: 1.25rem 2rem; } }
+    @media only screen and (max-width: 27.5em) {
+      .overview__heading {
+        font-size: 2.25rem;
+        padding: 1rem 2rem;
+        padding-bottom: 0.5rem; } }
   .overview__stars {
     margin-right: auto;
     display: flex; }
+    @media only screen and (max-width: 27.5em) {
+      .overview__stars {
+        margin: 0;
+        order: -1;
+        padding-top: 2rem; } }
   .overview__icon-star, .overview__icon-location {
     fill: var(--color-primary);
     height: 1.75rem;
@@ -282,6 +326,9 @@ body {
     font-size: 1.2rem;
     display: flex;
     align-items: center; }
+    @media only screen and (max-width: 27.5em) {
+      .overview__location {
+        margin-bottom: 2rem; } }
   .overview__icon-location {
     margin-right: 1rem; }
   .overview__rating {
@@ -294,13 +341,32 @@ body {
     justify-content: center;
     align-self: stretch;
     padding: 0 2rem; }
+    @media only screen and (max-width: 37.5em) {
+      .overview__rating {
+        padding: 0 1.4rem; } }
+    @media only screen and (max-width: 27.5em) {
+      .overview__rating {
+        margin-left: 0;
+        padding: 0.5rem 1.4rem; } }
   .overview__rating-average {
     font-size: 2rem;
     font-weight: 300;
     margin-bottom: -0.3rem; }
+    @media only screen and (max-width: 37.5em) {
+      .overview__rating-average {
+        font-size: 1.8rem; } }
+    @media only screen and (max-width: 27.5em) {
+      .overview__rating-average {
+        font-size: 3rem; } }
   .overview__rating-votes {
     font-size: 1rem;
     text-transform: uppercase; }
+    @media only screen and (max-width: 37.5em) {
+      .overview__rating-votes {
+        font-size: 0.7rem; } }
+    @media only screen and (max-width: 27.5em) {
+      .overview__rating-votes {
+        font-size: 1.2rem; } }
 
 /*---------- inline-button ----------*/
 .btn-inline {

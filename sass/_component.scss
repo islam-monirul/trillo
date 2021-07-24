@@ -13,6 +13,12 @@
      align-items: center;
      justify-content: center;
 
+     @media only screen and (max-width: $bp-smallest){
+          order: 1;
+          flex: 0 0 100%;
+          background-color: var(--color-Grey-light-2);
+     }
+     
      &__input{
           font-family: inherit;
           font-size: inherit;
@@ -59,6 +65,7 @@
           width: 2rem;
           fill: var(--color-Grey-dark-3);
      }
+
 }
 
 /*---------- user-navigation ----------*/
@@ -195,6 +202,11 @@
                justify-content: center;
                padding: 2rem;
           }
+
+          @media only screen and (max-width: $bp-small){
+               flex-direction: column;
+               padding: 1.5rem .5rem;
+          }
           
      }
 
@@ -203,6 +215,13 @@
           height: 1.75rem;
           margin-right: 2rem;
           fill: currentColor; //currentColor property gives the element same color as parent.
+
+          @media only screen and (max-width: $bp-small){
+               margin-right: 0;
+               width: 1.5rem;
+               height: 1.5rem;
+               margin-bottom: 0.7rem;
+          }
      }
 }
 
@@ -235,17 +254,38 @@
      border-bottom: 1px solid var(--color-Grey-light-2);
      align-items: center;
 
+     @media only screen and (max-width: $bp-custom-smallest){
+          flex-direction: column;
+     }
+
      &__heading{
           font-size: 2.25rem;
           font-weight: 300;
           text-transform: uppercase;
           letter-spacing: 0.1rem;
           padding: 1.5rem 3rem;
+
+          @media only screen and (max-width: $bp-small){
+               font-size: 1.8rem;
+               padding: 1.25rem 2rem;
+          }
+
+          @media only screen and (max-width: $bp-custom-smallest){
+               font-size: 2.25rem;
+               padding: 1rem 2rem;
+               padding-bottom: 0.5rem;
+          }
      }
 
      &__stars{
           margin-right: auto;
           display: flex;
+
+          @media only screen and (max-width: $bp-custom-smallest){
+               margin: 0;
+               order: -1;
+               padding-top: 2rem;
+          }
      }
 
      &__icon-star,
@@ -259,6 +299,10 @@
           font-size: 1.2rem;
           display: flex;
           align-items: center;
+
+          @media only screen and (max-width: $bp-custom-smallest){
+               margin-bottom: 2rem;
+          }
      }
 
      &__icon-location{
@@ -278,17 +322,42 @@
           align-self: stretch;
 
           padding: 0 2rem;
+
+          @media only screen and (max-width: $bp-small){
+               padding: 0 1.4rem;
+          }
+
+          @media only screen and (max-width: $bp-custom-smallest){
+               margin-left: 0;
+               padding: 0.5rem 1.4rem;
+          }
      }
 
      &__rating-average{
           font-size: 2rem;
           font-weight: 300;
           margin-bottom: -0.3rem;
+
+          @media only screen and (max-width: $bp-small){
+               font-size: 1.8rem;
+          }
+
+          @media only screen and (max-width: $bp-custom-smallest){
+               font-size: 3rem;
+          }
      }
 
      &__rating-votes{
           font-size: 1rem;
           text-transform: uppercase;
+
+          @media only screen and (max-width: $bp-small){
+               font-size: 0.7rem;
+          }
+
+          @media only screen and (max-width: $bp-custom-smallest){
+               font-size: 1.2rem;
+          }
      }
 }
 
@@ -368,10 +437,6 @@
           height: 1rem;
           width: 1rem;
           margin-right: 0.7rem;
-
-          // older browser
-          // background-image: url(../img/chevron-thin-right.svg);
-          // background-size: cover;
 
           //newer browsers - masks
           background-color: var(--color-primary);
