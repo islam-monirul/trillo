@@ -20,6 +20,11 @@
      --line2: 1px solid var(--color-Grey-light-4);
 }
 
+// sass variables
+$bp-largest: 75em;
+$bp-large: 68.75em;
+$bp-medium: 56.25em;
+
 
 //global setup
 *{
@@ -36,6 +41,10 @@
 html{
      box-sizing: border-box;
      font-size: 62.5%; // 1rem = 10px
+
+     @media only screen and (max-width: $bp-large){
+          font-size: 50%;
+     }
 }
 
 body{
